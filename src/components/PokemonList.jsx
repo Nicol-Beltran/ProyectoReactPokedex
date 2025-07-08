@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import PokemonCard from "./PokemonCard"
 export default function PokemonList(){
     const [pokemons, setPokemons] = useEffect([])
 
@@ -8,8 +9,17 @@ export default function PokemonList(){
         }
         fetchData()
     }, [])
+    //TODO
     return(
+
         <>
+        <h3>POKEDEX</h3>
+        <div className="row g-4">
+        {pokemons.map(pokemon=>{
+            <PokemonCard key={pokemon.id}/>
+
+        })}
+        </div>
         </>
     )
 }

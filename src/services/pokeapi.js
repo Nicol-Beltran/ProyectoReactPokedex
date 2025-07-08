@@ -4,7 +4,7 @@ export async function getPokemons(offset= 50) {
 
     for (let i = 0; i < offset; i++) {
         data = array[i];
-        
+       //TODO 
     }
 
     try {
